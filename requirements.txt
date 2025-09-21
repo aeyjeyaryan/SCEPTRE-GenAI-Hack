@@ -16,6 +16,5 @@ pydub
 moviepy
 requests
 motor
-bson
 certifi
 google-generativeai
