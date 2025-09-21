@@ -52,7 +52,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ token }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/chat', {
+      const response = await fetch('/chat', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

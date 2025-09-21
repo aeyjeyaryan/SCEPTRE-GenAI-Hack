@@ -67,7 +67,7 @@ const VerificationInterface: React.FC<VerificationInterfaceProps> = ({ token }) 
     const content = formData.get('content') as string;
 
     try {
-      const response = await fetch('/api/verify', {
+      const response = await fetch('/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -108,7 +108,7 @@ const VerificationInterface: React.FC<VerificationInterfaceProps> = ({ token }) 
     formData.append('session_id', sessionId);
 
     try {
-      const response = await fetch('/api/verify', {
+      const response = await fetch('/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -145,7 +145,7 @@ const VerificationInterface: React.FC<VerificationInterfaceProps> = ({ token }) 
     const url = formData.get('url') as string;
 
     try {
-      const response = await fetch('/api/verify', {
+      const response = await fetch('/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
