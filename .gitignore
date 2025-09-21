@@ -1,11 +1,28 @@
-/Users/aryanjha/Desktop/GenAI hack/__pycache__
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
 
-/Users/aryanjha/Desktop/GenAI hack/.venv
+# Virtual environment
+.venv/
+venv/
 
-/Users/aryanjha/Desktop/GenAI hack/.gitignore
+# Environment variables
+.env
+frontend/.env
 
-/Users/aryanjha/Desktop/GenAI hack/uv.lock
+# Git ignore lock files
+uv.lock
 
-/Users/aryanjha/Desktop/GenAI hack/.env
+# Ignore OS files
+.DS_Store
+Thumbs.db
 
-/Users/aryanjha/Desktop/GenAI hack/frontend/.env
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Node / frontend dependencies (if using npm/yarn)
+node_modules/
+dist/
+build/
