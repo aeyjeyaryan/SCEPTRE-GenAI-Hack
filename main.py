@@ -328,7 +328,7 @@ async def refresh_knowledge_base(
         raise HTTPException(status_code=500, detail=str(e))
 
 # Health check endpoint
-@app.get("/health")
+@app.get("/")
 async def health_check():
     """Health check endpoint."""
     return {
