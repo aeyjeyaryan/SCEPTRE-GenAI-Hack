@@ -15,6 +15,7 @@ SpeechRecognition
 pydub
 moviepy
 requests
+python-multipart==0.0.12
 motor
 certifi
 google-generativeai
