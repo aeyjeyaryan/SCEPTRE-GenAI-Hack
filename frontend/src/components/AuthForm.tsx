@@ -15,6 +15,9 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
+  // Use full Render URL
+  const API_BASE_URL = 'https://sceptre-genai-hack.onrender.com';
+
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
@@ -25,7 +28,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
     loginData.append('password', formData.get('password') as string);
 
     try {
-      const response = await fetch('/login', {
+      const response = await fetch(`${API_BASE_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: loginData,
@@ -39,12 +42,13 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
           description: "Welcome to SCEPTRE",
         });
       } else {
-        throw new Error('Login failed');
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Login failed');
       }
     } catch (error) {
       toast({
         title: "Login failed",
-        description: "Please check your credentials and try again.",
+        description: error.message || "Please check your credentials and try again.",
         variant: "destructive",
       });
     } finally {
@@ -64,7 +68,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
     };
 
     try {
-      const response = await fetch('/signup', {
+      const response = await fetch(`${API_BASE_URL}/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData),
@@ -76,12 +80,13 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
           description: "Please log in with your new credentials.",
         });
       } else {
-        throw new Error('Signup failed');
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Signup failed');
       }
     } catch (error) {
       toast({
         title: "Signup failed",
-        description: "Please try again with different credentials.",
+        description: error.message || "Please try again with different credentials.",
         variant: "destructive",
       });
     } finally {

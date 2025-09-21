@@ -52,7 +52,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ token }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/chat', {
+      const response = await fetch('https://sceptre-genai-hack.onrender.com/chat', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

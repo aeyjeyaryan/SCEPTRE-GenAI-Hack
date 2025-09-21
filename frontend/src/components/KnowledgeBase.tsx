@@ -31,7 +31,7 @@ const KnowledgeBase: React.FC<KnowledgeBaseProps> = ({ token }) => {
     const topic = formData.get('topic') as string;
 
     try {
-      const response = await fetch('/refresh-knowledge-base', {
+      const response = await fetch('https://sceptre-genai-hack.onrender.com/refresh-knowledge-base', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

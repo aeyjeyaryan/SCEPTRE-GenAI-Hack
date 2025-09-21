@@ -145,7 +145,7 @@ const VerificationInterface: React.FC<VerificationInterfaceProps> = ({ token }) 
     const url = formData.get('url') as string;
 
     try {
-      const response = await fetch('/verify', {
+      const response = await fetch('https://sceptre-genai-hack.onrender.com/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
