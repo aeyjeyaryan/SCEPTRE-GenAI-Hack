@@ -25,7 +25,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
     loginData.append('password', formData.get('password') as string);
 
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: loginData,
@@ -64,7 +64,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onAuthSuccess }) => {
     };
 
     try {
-      const response = await fetch('/api/signup', {
+      const response = await fetch('/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData),
