@@ -9,10 +9,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     proxy: {
-      "/api": {
+      "^(?!/src|/@|/node_modules).*": {
         target: "https://sceptre-genai-hack.onrender.com",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
@@ -23,4 +22,3 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
-
