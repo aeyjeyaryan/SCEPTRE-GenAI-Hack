@@ -67,7 +67,7 @@ const VerificationInterface: React.FC<VerificationInterfaceProps> = ({ token }) 
     const content = formData.get('content') as string;
 
     try {
-      const response = await fetch('/verify', {
+      const response = await fetch('https://sceptre-genai-hack.onrender.com/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -108,7 +108,7 @@ const VerificationInterface: React.FC<VerificationInterfaceProps> = ({ token }) 
     formData.append('session_id', sessionId);
 
     try {
-      const response = await fetch('/verify', {
+      const response = await fetch('https://sceptre-genai-hack.onrender.com/verify', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
