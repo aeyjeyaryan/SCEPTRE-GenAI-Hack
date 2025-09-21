@@ -39,7 +39,7 @@ async def generate_response(query: str, chat_history: List[ChatMessage], session
     try:
         if session_id not in knowledge_bases or knowledge_bases[session_id].is_empty():
             return {
-                "answer": "I don't have enough information to answer. Try refreshing the knowledge base with a specific topic.",
+                "answer": "I don't have enough information to answer. Try refreshing the knowledge base with a specific topic. Maybe API Limit has exhausted.",
                 "sources": []
             }
         
