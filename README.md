@@ -13,20 +13,18 @@ It leverages deep learning (TensorFlow), Google Cloud Platform, Programmable Sea
 
 4. Create a `.env` file inside `backend/` and add:  
 
-GOOGLE_API_KEY=
-GOOGLE_CSE_ID=
-GEMINI_API_KEY=
-JWT_SECRET_KEY=
-MONGO_URI=
-
-
+GOOGLE_API_KEY= <>
+GOOGLE_CSE_ID=<>
+GEMINI_API_KEY=<>
+JWT_SECRET_KEY=<>
+MONGO_URI=<>
 
 HOST=0.0.0.0
 PORT=8000
 DEBUG=false
 
-MODEL_PATH=
-TOKENIZER_PATH=
+MODEL_PATH=<>
+TOKENIZER_PATH=<>
 
 
 5. Run backend server:  
