@@ -18,7 +18,7 @@ class FactChecker:
         if not self.gemini_api_key:
             raise ValueError("Missing GEMINI_API_KEY environment variable")
         genai.configure(api_key=self.gemini_api_key)
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Trusted domains for fact-checking
         self.trusted_domains = {
