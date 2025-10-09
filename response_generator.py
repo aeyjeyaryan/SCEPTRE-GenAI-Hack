@@ -25,7 +25,7 @@ async def summarize_history(chat_history: List[ChatMessage]) -> str:
         return ""
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-pro')
         history_text = "\n".join([f"{msg.role}: {msg.content}" for msg in chat_history[-10:]])
         prompt = f"Summarize the following conversation concisely in up to 100 words:\n{history_text}"
         response = await asyncio.to_thread(model.generate_content, prompt)
