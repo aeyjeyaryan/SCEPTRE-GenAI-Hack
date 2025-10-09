@@ -87,7 +87,7 @@ async def generate_response(query: str, chat_history: List[ChatMessage], session
         """
 
         # Generate response using Gemini
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-pro")
         response = await asyncio.to_thread(model.generate_content, prompt)
         answer = response.text if response else "I couldn't generate a response based on the provided information."
 

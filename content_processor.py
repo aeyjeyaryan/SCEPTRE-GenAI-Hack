@@ -26,7 +26,7 @@ class ContentProcessor:
     """Handles processing of different content types: images, videos, and URLs."""
     
     def __init__(self):
-        self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+        self.gemini_model = genai.GenerativeModel('gemini-2.5-pro')
         self.recognizer = sr.Recognizer()
         
     async def process_image(self, image_file: UploadFile) -> str:
