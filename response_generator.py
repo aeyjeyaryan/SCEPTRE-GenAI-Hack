@@ -72,7 +72,7 @@ async def generate_response(query: str, chat_history: List[ChatMessage], session
         2. Detect signals of potential misinformation, manipulation, or bias.
         3. Explain clearly *why* the content might be misleading (e.g., lack of credible sources, emotional manipulation, logical fallacies, unverifiable claims).
         4. Provide fact-based clarification or direct the user towards credible sources (when available).
-        Keep the tone supportive, simple, and empowering. Keep your answer under 50-60 words.
+        Keep the tone supportive, simple, and empowering. Keep your answer under 100-120 words.
 
         Context (from retrieved documents and sources):
         {doc_context}
